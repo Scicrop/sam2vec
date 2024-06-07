@@ -5,6 +5,7 @@ import leafmap
 import requests
 import rasterio
 import numpy as np
+
 from rasterio.enums import Resampling
 from samgeo import SamGeo, tms_to_geotiff, get_basemaps
 from decouple import config
@@ -23,7 +24,7 @@ def get_sentinel2_images_dates(geometry, cloud_percentage):
         "date": "9999-01-01",
         "source": "SENTINEL-2",
         "offset": 0,
-        "limit": 24
+        "limit": 100
     }
 
     headers = {
